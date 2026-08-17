@@ -23,7 +23,7 @@ h1{
     font-size: var(--Giga-Texte);
     margin-left: 5vw;
 }
-h1 span{
+span{
     color: var(--couleur-turquoise-normale);
 }
 h2{
@@ -37,9 +37,12 @@ p{
     font-size: var(--moyen-Texte);
 }
 
+/*Page d'accueil*/
+
 .premiereSectionAccueil{
     display: flex;
     gap:50px;
+    justify-content: center;
     margin-top: 7vh;
     margin-left: 5vw;
     margin-bottom: 7vh;
@@ -62,7 +65,11 @@ p{
     border-radius:5px;
     width: 800px;
 }
-
+.blocParagraphePlusAudio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .citationAccueilContainer {
     display: flex;
     justify-content: center;
@@ -70,6 +77,39 @@ p{
 #auteur{
     align-self: flex-end;
 }
+
+/* Section accueil Jeu*/
+.jouerAvecLesSons{
+    display: flex;
+    justify-content: center;
+}
+.LeJeuDeSon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.GrilleDeNotes{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    border: 2px solid var(--couleur-turquoise-normale);
+    border-radius: 5px;
+}
+.GrilleDeNotes p:hover{
+    border: 2px solid var(--couleur-turquoise-normale);
+    border-radius: 5px;
+}
+button{
+    width: 200px;
+    font-size: var(--gros-Texte);
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--couleur-turquoise-normale);
+    margin-bottom: 10vh;;
+}
+
+
+
 @media(max-width:1024px){
     .premiereSectionAccueil{
         flex-direction: column;
