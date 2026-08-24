@@ -7,6 +7,7 @@ let leResultat= document.querySelector("#leResultat");
 let imgNote = document.querySelector("#imgNote");
 let cheminImgNote = "Images/Jeu/";
 let rentrerUnePremièreFois = 0;
+let echouerUnePremièreFois = 0;
 
 /*Déclarations de mes fonctions*/
 
@@ -93,7 +94,20 @@ function testerSons(){
                 leResultat.textContent="Réussi";
                 imgNote.src=cheminImgNote;
             }else{
-               leResultat.textContent="Vous y êtes presque! Recommencer";
+                switch(echouerUnePremièreFois){
+                    case 0:
+                    leResultat.textContent="Vous y êtes presque! Recommencer";
+                    echouerUnePremièreFois++;
+                    break;
+                    case 1:
+                    leResultat.textContent="Continue!";
+                    echouerUnePremièreFois++;
+                    break;
+                    case 2:
+                    leResultat.textContent="Courage, tu fais de ton mieux";
+                    echouerUnePremièreFois=0;
+                    break;
+                }
             }
         });
     });

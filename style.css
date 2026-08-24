@@ -84,6 +84,9 @@ p{
 .citationAccueilContainer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
 }
 #auteur{
     align-self: flex-end;
